@@ -2,6 +2,7 @@
 import "./App.css";
 import { useState } from "react";
 import Header from "./Components/Header";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const [messages, setMessages] = useState([
@@ -9,6 +10,10 @@ function App() {
       type: "bot",
       text: "Hi Jane, Amazing how Mosey is simplifying state compliance for businesses across the board!",
     },
+    {
+      type:"user",
+      text:"hi thanks for listen my gaali mr pratoosh"
+    }
   ]);
 
   const [userInput, setUserInput] = useState("");
@@ -34,7 +39,7 @@ function App() {
   return (
     <div className="app">
       <div className="chatbot-container">
-        <Header/>
+        <Header />
         <div className="chatbot-body">
           {messages.map((message, index) => (
             <div key={index} className={`chat-message ${message.type === "user" ? "user" : "bot"}`}>
@@ -42,15 +47,11 @@ function App() {
             </div>
           ))}
         </div>
-        <div className="chatbot-footer">
-          <input
-            type="text"
-            value={userInput}
-            onChange={handleUserInput}
-            placeholder="Your question"
-          />
-          <button onClick={handleSendMessage}>Send</button>
-        </div>
+        <Footer
+          userInput={userInput}
+          handleUserInput={handleUserInput}
+          handleSendMessage={handleSendMessage}
+        />
       </div>
     </div>
   );

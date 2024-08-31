@@ -41,32 +41,9 @@
 }
 
 .chat-message.user {
-  background-color: #BBB8A3;
+  background-color: #7c37fe;
   color: white;
   align-self: flex-end;
   border-top-right-radius: 0;
 }
 
-.chatbot-footer {
-  padding: 10px;
-  background-color: #f5f5f5;
-  display: flex;
-  align-items: center;
-}
-
-.chatbot-footer input {
-  flex-grow: 1;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.chatbot-footer button {
-  padding: 8px 12px;
-  margin-left: 10px;
-  border: none;
-  background-color: #4a90e2;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-}
